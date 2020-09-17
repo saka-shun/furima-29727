@@ -15,8 +15,8 @@ users テーブル
 
 Association
 
-- has_many :items
-- has_many :purchases
+- has_many :item
+- has_many :purchase
 
 items テーブル
 
@@ -34,8 +34,8 @@ items テーブル
 
 Association
 
-- belongs_to :users
-- has_one : purchases
+- belongs_to :user
+- has_one : purchase
 
 purchases テーブル
 
@@ -46,21 +46,22 @@ purchases テーブル
 
 Association
 
-- belongs_to :users
-- belongs_to :items
-- has_one :addresses
+- belongs_to :user
+- belongs_to :item
+- has_one :addresse
 
 addresses テーブル
 
-| Column           | Type    | Options    |
-| ---------------- | ------- | ---------- |
-| postal_code      | string  | null:false |
-| prefectures      | integer | null:false |
-| municipalities   | string  | null:false |
-| house_number     | string  | null:false |
-| building_name    | string  |            |
-| phone_number     | string  | null:false |
+| Column           | Type       | Options                     |
+| ---------------- | ---------- | --------------------------- | 
+| postal_code      | string     | null:false                  |
+| prefectures      | integer    | null:false                  |
+| municipalities   | string     | null:false                  |
+| house_number     | string     | null:false                  |
+| building_name    | string     |                             |
+| phone_number     | string     | null:false                  |
+| purchase         | references | null:false,foreign_key:true |
 
 Association
 
-- belongs_to :purchases
+- belongs_to :purchase
