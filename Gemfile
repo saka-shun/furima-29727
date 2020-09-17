@@ -60,3 +60,4 @@ end
 
 gem 'sqlite3', group: [:development, :test]
 gem 'pg',group: :producion
+gem 'devise'
