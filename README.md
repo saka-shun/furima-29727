@@ -20,17 +20,17 @@ Association
 
 items テーブル
 
-| Column           | Type        | Options                     |
-| ---------------- | ----------- | --------------------------- |
-| user             | references  | null:false,foreign_key:true |
-| name             | string      | null:false                  |
-| description      | text        | null:false                  |
-| category         | integer     | null:false                  |
-| condition        | integer     | null:false                  |
-| shopping_charges | integer     | null:false                  |
-| delivery_area    | integer     | null:false                  |
-| days_to_delivery | integer     | null:false                  |
-| price            | integer     | null:false                  |
+| Column              | Type        | Options                     |
+| ------------------- | ----------- | --------------------------- |
+| user                | references  | null:false,foreign_key:true |
+| name                | string      | null:false                  |
+| description         | text        | null:false                  |
+| category_id         | integer     | null:false                  |
+| condition_id        | integer     | null:false                  |
+| shopping_charges_id | integer     | null:false                  |
+| delivery_area_id    | integer     | null:false                  |
+| days_to_delivery_id | integer     | null:false                  |
+| price               | integer     | null:false                  |
 
 Association
 
