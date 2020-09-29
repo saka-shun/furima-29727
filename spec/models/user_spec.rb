@@ -63,7 +63,7 @@ RSpec.describe User, type: :model do
     expect(@user.errors.full_messages).to include("Last_name_kana is invalid. Input full-width characters")
   end
   it "birthday_dateが空だと登録できない" do
-    @user.birthday_date = 1930-01-01
+    @user.birthday_date = nil
     @user.valid?
     expect(@user.errors.full_messages).to include("birthday_date can't be blank")
   end

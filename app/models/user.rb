@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])[a-z\d]\z/
   
    with_options presence: true do
      validates :nickname
