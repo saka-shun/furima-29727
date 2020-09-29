@@ -9047,3 +9047,106 @@ Migrating to DeviseCreateUsers (20200917054526)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2708480166760866435')[0m
   [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/sign_up" for ::1 at 2020-09-29 16:22:07 +0900
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 1278.2ms | Allocations: 1471627)
+  Rendered shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 191)
+  Rendered shared/_second-footer.html.erb (Duration: 0.9ms | Allocations: 440)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1503.7ms | Allocations: 1671159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1571ms (Views: 1546.2ms | ActiveRecord: 4.9ms | Allocations: 1702553)
+
+
+Started POST "/users" for ::1 at 2020-09-29 16:33:20 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"SfAA2nTjVGQC9p9LLa7pYYUMwHG8uEiNyw64i+ENVuUGnRl5wnz78oU+JAehctg8RXcAQi3M78JHeKClz1xnEg==", "user"=>{"nickname"=>"furima", "email"=>"sample@sample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"山大", "last_name"=>"りく", "first_name_kana"=>"ヤマファ", "last_name_kana"=>"リク", "birthday_date(1i)"=>"1933", "birthday_date(2i)"=>"2", "birthday_date(3i)"=>"3"}, "commit"=>"会員登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sample@sample.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.9ms | Allocations: 693)
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 148)
+  Rendered shared/_second-footer.html.erb (Duration: 0.2ms | Allocations: 311)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 4100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 283ms (Views: 17.8ms | ActiveRecord: 0.5ms | Allocations: 30295)
+
+
+Started POST "/users" for ::1 at 2020-09-29 16:33:49 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"yNEmH1dc62X/fPqqqjeSTwdPK9Hb40CSedQ8JUA1SueHvD+84cNE83i0QeYm66MSxzTr4kqX5931oiQLbmR7EA==", "user"=>{"nickname"=>"furima", "email"=>"sample@sample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"山大", "last_name"=>"りく", "first_name_kana"=>"ヤマファ", "last_name_kana"=>"リク", "birthday_date(1i)"=>"1933", "birthday_date(2i)"=>"2", "birthday_date(3i)"=>"3"}, "commit"=>"会員登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sample@sample.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.9ms | Allocations: 692)
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_second-footer.html.erb (Duration: 0.2ms | Allocations: 311)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 4079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 277ms (Views: 18.9ms | ActiveRecord: 0.6ms | Allocations: 27400)
+
+
+Started POST "/users" for ::1 at 2020-09-29 16:34:16 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"hfYgt+F6BT7829hmDCBqSRHupkwJMdSw2YoL8y8qfJfKmzkUV+WqqHsTYyqA/FsU0ZVmf5hFc/9V/BPdAXtNYA==", "user"=>{"nickname"=>"furima", "email"=>"sample@sample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"山大", "last_name"=>"りく", "first_name_kana"=>"ヤマファ", "last_name_kana"=>"リク", "birthday_date(1i)"=>"1933", "birthday_date(2i)"=>"2", "birthday_date(3i)"=>"3"}, "commit"=>"会員登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sample@sample.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.8ms | Allocations: 692)
+  Rendered shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered shared/_second-footer.html.erb (Duration: 0.3ms | Allocations: 311)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 4079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 273ms (Views: 18.3ms | ActiveRecord: 0.6ms | Allocations: 27411)
+
+
+Started GET "/" for ::1 at 2020-09-29 16:36:01 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.4ms | Allocations: 1797)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 1504)
+  Rendered items/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 11019)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 29333)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-29 16:36:04 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_second-header.html.erb (Duration: 0.9ms | Allocations: 693)
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered shared/_second-footer.html.erb (Duration: 0.3ms | Allocations: 311)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 20.6ms | ActiveRecord: 3.8ms | Allocations: 31055)
+
+
+Started POST "/users" for ::1 at 2020-09-29 16:37:23 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"sJ6r4bWW6mEr+LX/Qd39dipVS9SVeIHUVFdJgd8L/07gdKUhQ1ox39OlwmK2k5jW48aJHU6upVYpLEFbzifGJQ==", "user"=>{"nickname"=>"furima", "email"=>"sample@sample.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"ヤマダ", "last_name"=>"ヤマダ", "first_name_kana"=>"ヤマダ", "last_name_kana"=>"ヤマダ", "birthday_date(1i)"=>"1930", "birthday_date(2i)"=>"2", "birthday_date(3i)"=>"2"}, "commit"=>"会員登録"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sample@sample.com' LIMIT 1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `nickname`, `first_name`, `last_name`, `last_name_kana`, `first_name_kana`, `birthday_date`, `created_at`, `updated_at`) VALUES ('sample@sample.com', '$2a$12$OFvDwZdJxbkUkgatcndwF.js/O3ASc9rmAzD9ViuodjkkJ2prj5xO', 'furima', 'ヤマダ', 'ヤマダ', 'ヤマダ', 'ヤマダ', '1930-02-02', '2020-09-29 07:37:24.032320', '2020-09-29 07:37:24.032320')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 258ms (ActiveRecord: 2.2ms | Allocations: 8395)
+
+
+Started GET "/" for ::1 at 2020-09-29 16:37:24 +0900
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_header.html.erb:19
+  Rendered shared/_header.html.erb (Duration: 4.3ms | Allocations: 2869)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 1076)
+  Rendered items/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 10124)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.4ms | Allocations: 27065)
+
+
